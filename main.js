@@ -77,7 +77,6 @@ fs.writeFile('lunr-index.json', JSON.stringify(index), (err)=>{
 var zip = new AdmZip();
 
 // add file directly
-var content = "inner content of the file";
 zip.addFile("index.txt", Buffer.from(JSON.stringify(index), "utf8"), "index of lunr");
 // write everything to disk
 zip.writeZip("lunr-index.zip");
